@@ -1,0 +1,60 @@
+    <!-- navbar -->
+
+    <nav id="top-nav">
+
+        <!-- Nav Header -->
+        <div class="nav-header">
+            <img src="./img/fusion.png" alt="fusion-logo" class="fusion-logo">
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+        <ul class="links">
+            <li><a href="#">Home</a></li>
+
+            <li class="dropdown"><a href="#">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Strategy</a></li>
+                    <li><a href="#">Branding</a></li>
+                    <li><a href="#">Design</a></li>
+                </ul>
+            
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+
+    </nav>
+
+----------------------------------------------------
+
+
+#top-nav {min-height: 75px; position:sticky; background-color: var(--clr-grey-2); top:0; box-shadow: var(--shadow); display: flex; flex-direction: row; justify-content: space-between; align-items: center;}
+#top-nav ul {background-color: var(--clr-grey-2); list-style: none;}
+#top-nav ul li {display: inline-block; padding: 15px;}
+#top-nav ul li a {display: block; padding: 15px 30px; transition: var(--transition);}
+#top-nav ul li a:hover {background-color: var(--clr-primary-1);}
+
+/*********** Dropdown Styles ***********/
+
+li.dropdown{position: relative;}
+ul.dropdown-menu {position: absolute; width: 150px;}
+ul.dropdown-menu li {display:block !important; white-space:nowrap; padding: 15px 0 !important;}
+
+ul.dropdown-menu {display:none;}
+
+.nav-header {padding-left: 15px;}
+.nav-toggle {display: none;}
+
+.links {height: auto; display: flex;}
+.links a {padding: 0; margin: 0 0.5rem;}
+
+/*********** Responsive Styles ***********/
+
+@media only screen and (max-width: 768px) {
+  .nav-header {display: flex; align-items:center; justify-content: space-between;}
+
+  .nav-toggle {font-size: 1.5rem; color: #fff; background: transparent; border-color: transparent; transition: var(--transition); cursor: pointer; padding: 15px 30px; }
+  .nav-toggle:hover {color:var(--clr-primary-1);}
+
+  .show-nav {height: 10rem;}
+}
